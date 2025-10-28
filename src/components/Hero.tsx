@@ -29,7 +29,7 @@ const Hero = () => {
           alt="Piscina cristalina" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/50 to-background/60"></div>
       </div>
       
       {/* Animated Water Effect */}
