@@ -4,19 +4,25 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import equipmentInstallation from "@/assets/equipment-installation.jpg";
 import poolLighting from "@/assets/pool-lighting.jpg";
 import poolHeating from "@/assets/pool-heating.jpg";
+import serviceFilter from "@/assets/service-filter.jpg";
+import servicePump from "@/assets/service-pump.jpg";
+import serviceHydraulic from "@/assets/service-hydraulic.jpg";
+import productHeater from "@/assets/product-heater.jpg";
+import productChlorine from "@/assets/product-chlorine.jpg";
+import productLed from "@/assets/product-led.jpg";
 
 const Services = () => {
   const products = [
-    { name: "Trocador de calor", icon: Zap },
-    { name: "Filtros", icon: Filter },
-    { name: "Motores", icon: Wrench },
-    { name: "Aquecimento solar", icon: Sun },
-    { name: "Comando para o sistema MMZ", icon: Zap },
-    { name: "Dispositivos", icon: Package },
-    { name: "Lâmpadas LED", icon: Zap },
-    { name: "Comando RGB com controle", icon: Zap },
-    { name: "Cascata", icon: Waves },
-    { name: "Gerador de cloro a base de sal", icon: Filter },
+    { name: "Trocador de calor", icon: Zap, image: productHeater },
+    { name: "Filtros", icon: Filter, image: serviceFilter },
+    { name: "Motores", icon: Wrench, image: servicePump },
+    { name: "Aquecimento solar", icon: Sun, image: poolHeating },
+    { name: "Comando para o sistema MMZ", icon: Zap, image: equipmentInstallation },
+    { name: "Dispositivos", icon: Package, image: equipmentInstallation },
+    { name: "Lâmpadas LED", icon: Zap, image: productLed },
+    { name: "Comando RGB com controle", icon: Zap, image: poolLighting },
+    { name: "Cascata", icon: Waves, image: poolLighting },
+    { name: "Gerador de cloro a base de sal", icon: Filter, image: productChlorine },
   ];
 
   const services = [
@@ -24,31 +30,37 @@ const Services = () => {
       title: "Montagem de casa de máquina",
       description: "Instalação completa da parte hidráulica",
       icon: Wrench,
+      image: serviceHydraulic,
     },
     {
       title: "Instalação de LEDs",
       description: "Iluminação profissional para sua piscina",
       icon: Zap,
+      image: productLed,
     },
     {
       title: "Instalação de trocador de calor",
       description: "Sistema de aquecimento eficiente",
       icon: Zap,
+      image: productHeater,
     },
     {
       title: "Instalação de filtros",
       description: "Sistema de filtragem completo",
       icon: Filter,
+      image: serviceFilter,
     },
     {
       title: "Instalação de gerador de cloro",
       description: "Tratamento automático da água",
       icon: Filter,
+      image: productChlorine,
     },
     {
       title: "Instalação de motobomba",
       description: "Circulação adequada da água",
       icon: Wrench,
+      image: servicePump,
     },
   ];
 
@@ -76,16 +88,26 @@ const Services = () => {
                 {services.map((service, index) => (
                   <Card 
                     key={index}
-                    className="shadow-soft border-primary/20 hover:shadow-glow transition-all duration-300 hover:-translate-y-1"
+                    className="shadow-soft border-primary/20 hover:shadow-glow transition-all duration-300 hover:-translate-y-1 overflow-hidden"
                   >
-                    <CardHeader>
-                      <div className="w-12 h-12 bg-gradient-water rounded-lg flex items-center justify-center mb-4">
-                        <service.icon className="w-6 h-6 text-primary-foreground" />
+                    <div className="relative h-40 md:h-48 overflow-hidden">
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent"></div>
+                    </div>
+                    <CardHeader className="pb-3">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-gradient-water rounded-lg flex items-center justify-center flex-shrink-0">
+                          <service.icon className="w-5 h-5 text-primary-foreground" />
+                        </div>
+                        <CardTitle className="text-lg md:text-xl">{service.title}</CardTitle>
                       </div>
-                      <CardTitle className="text-xl">{service.title}</CardTitle>
                     </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">{service.description}</p>
+                    <CardContent className="pt-0">
+                      <p className="text-sm md:text-base text-muted-foreground">{service.description}</p>
                     </CardContent>
                   </Card>
                 ))}
@@ -97,13 +119,21 @@ const Services = () => {
                 {products.map((product, index) => (
                   <Card 
                     key={index}
-                    className="shadow-soft border-primary/20 hover:shadow-glow transition-all duration-300 hover:-translate-y-1"
+                    className="shadow-soft border-primary/20 hover:shadow-glow transition-all duration-300 hover:-translate-y-1 overflow-hidden group"
                   >
-                    <CardContent className="pt-6 flex items-center gap-4">
-                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <product.icon className="w-5 h-5 text-primary" />
+                    <div className="relative h-32 overflow-hidden">
+                      <img 
+                        src={product.image} 
+                        alt={product.name}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/60 to-transparent"></div>
+                      <div className="absolute bottom-2 left-2 w-8 h-8 bg-primary/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
+                        <product.icon className="w-4 h-4 text-primary" />
                       </div>
-                      <p className="font-medium text-foreground">{product.name}</p>
+                    </div>
+                    <CardContent className="pt-4 pb-4">
+                      <p className="font-medium text-sm md:text-base text-foreground">{product.name}</p>
                     </CardContent>
                   </Card>
                 ))}
