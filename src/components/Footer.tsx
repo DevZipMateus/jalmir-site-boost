@@ -3,11 +3,11 @@ import { MapPin, Phone, Mail, Clock, Facebook, Instagram, MessageCircle } from "
 const Footer = () => {
   return (
     <footer className="bg-secondary text-secondary-foreground">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-auto px-4 py-8 md:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {/* Sobre */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Jalmir Piscinas</h3>
+            <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Jalmir Piscinas</h3>
             <p className="text-secondary-foreground/80 text-sm">
               Mais de 10 anos de experiência em equipamentos, instalação e manutenção de piscinas em Indaiatuba e região.
             </p>
@@ -15,8 +15,8 @@ const Footer = () => {
 
           {/* Contato */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contato</h3>
-            <ul className="space-y-3 text-sm">
+            <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Contato</h3>
+            <ul className="space-y-2 md:space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <a href="https://wa.me/5519998843237" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
@@ -25,7 +25,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <a href="mailto:jalmirpiscinas@gmail.com" className="hover:text-accent transition-colors">
+                <a href="mailto:jalmirpiscinas@gmail.com" className="hover:text-accent transition-colors break-all">
                   jalmirpiscinas@gmail.com
                 </a>
               </li>
@@ -41,7 +41,7 @@ const Footer = () => {
 
           {/* Horário */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Horário</h3>
+            <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Horário</h3>
             <ul className="space-y-2 text-sm text-secondary-foreground/80">
               <li className="flex items-start gap-2">
                 <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
@@ -61,8 +61,8 @@ const Footer = () => {
 
           {/* Redes Sociais */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Redes sociais</h3>
-            <div className="flex gap-4">
+            <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Redes sociais</h3>
+            <div className="flex gap-3 md:gap-4">
               <a 
                 href="https://wa.me/5519998843237" 
                 target="_blank" 
@@ -95,7 +95,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-secondary-foreground/20 mt-8 pt-8 text-center text-sm text-secondary-foreground/60">
+        <div className="border-t border-secondary-foreground/20 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-xs md:text-sm text-secondary-foreground/60">
           <p>&copy; {new Date().getFullYear()} Jalmir Piscinas. Todos os direitos reservados.</p>
         </div>
       </div>
