@@ -1,5 +1,6 @@
 import { Heart, Users, Award, Target } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import poolMaintenance from "@/assets/pool-maintenance.jpg";
 
 const About = () => {
   return (
@@ -15,7 +16,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
+          <div className="grid md:grid-cols-2 gap-12 mb-16 items-center">
             <div className="space-y-6 animate-slide-in">
               <div>
                 <h3 className="text-2xl font-semibold mb-4 text-foreground">Quem somos</h3>
@@ -42,7 +43,13 @@ const About = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="space-y-6 animate-fade-in">
+              <img 
+                src={poolMaintenance} 
+                alt="Técnico realizando manutenção profissional em piscina" 
+                className="w-full h-auto rounded-2xl shadow-soft"
+              />
+              <div className="grid grid-cols-2 gap-4">
               <Card className="shadow-soft border-primary/20 hover:shadow-glow transition-all duration-300">
                 <CardContent className="pt-6 text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -90,6 +97,7 @@ const About = () => {
                   </p>
                 </CardContent>
               </Card>
+              </div>
             </div>
           </div>
 

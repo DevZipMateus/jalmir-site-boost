@@ -1,4 +1,5 @@
 import { Shield, Clock, ThumbsUp, Headphones } from "lucide-react";
+import equipmentInstallation from "@/assets/equipment-installation.jpg";
 
 const Differentials = () => {
   const items = [
@@ -61,18 +62,27 @@ const Differentials = () => {
             ))}
           </div>
 
-          <div className="mt-16 p-8 md:p-12 bg-primary/5 rounded-2xl border border-primary/20 text-center">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
-              Assistência técnica especializada
-            </h3>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
-              Oferecemos suporte completo: troca de areia do filtro, reparo em motores, 
-              reparos na válvula seletora e todo o suporte necessário para manter sua piscina 
-              sempre em perfeito funcionamento.
-            </p>
-            <div className="inline-flex items-center gap-2 text-primary font-medium">
-              <Headphones className="w-5 h-5" />
-              <span>Atendimento direto com o cliente</span>
+          <div className="mt-16 grid md:grid-cols-2 gap-8 items-center">
+            <div className="order-2 md:order-1">
+              <img 
+                src={equipmentInstallation} 
+                alt="Casa de máquina profissional para piscina" 
+                className="w-full h-auto rounded-2xl shadow-soft"
+              />
+            </div>
+            <div className="order-1 md:order-2 p-8 bg-primary/5 rounded-2xl border border-primary/20">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
+                Assistência técnica especializada
+              </h3>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Oferecemos suporte completo: troca de areia do filtro, reparo em motores, 
+                reparos na válvula seletora e todo o suporte necessário para manter sua piscina 
+                sempre em perfeito funcionamento.
+              </p>
+              <div className="inline-flex items-center gap-2 text-primary font-medium">
+                <Headphones className="w-5 h-5" />
+                <span>Atendimento direto com o cliente</span>
+              </div>
             </div>
           </div>
         </div>

@@ -1,6 +1,9 @@
 import { Wrench, Package, Waves, Zap, Sun, Filter } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import equipmentInstallation from "@/assets/equipment-installation.jpg";
+import poolLighting from "@/assets/pool-lighting.jpg";
+import poolHeating from "@/assets/pool-heating.jpg";
 
 const Services = () => {
   const products = [
@@ -107,6 +110,40 @@ const Services = () => {
               </div>
             </TabsContent>
           </Tabs>
+
+          {/* Gallery Section */}
+          <div className="mt-16 grid md:grid-cols-3 gap-6 animate-fade-in">
+            <div className="group relative overflow-hidden rounded-xl shadow-soft hover:shadow-glow transition-all duration-300">
+              <img 
+                src={equipmentInstallation} 
+                alt="Instalação profissional de equipamentos para piscina" 
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-6">
+                <p className="text-primary-foreground font-semibold">Equipamentos de qualidade</p>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-xl shadow-soft hover:shadow-glow transition-all duration-300">
+              <img 
+                src={poolLighting} 
+                alt="Iluminação LED para piscina ao anoitecer" 
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-6">
+                <p className="text-primary-foreground font-semibold">Iluminação LED</p>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-xl shadow-soft hover:shadow-glow transition-all duration-300">
+              <img 
+                src={poolHeating} 
+                alt="Sistema de aquecimento solar para piscina" 
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-6">
+                <p className="text-primary-foreground font-semibold">Aquecimento solar</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
