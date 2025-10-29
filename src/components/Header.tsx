@@ -39,37 +39,37 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 md:h-20">
           <button 
             onClick={() => scrollToSection("hero")}
             className="flex items-center gap-3 transition-transform hover:scale-105"
           >
-            <img src={logo} alt="Jalmir Piscinas" className="h-12 w-auto" />
+            <img src={logo} alt="Jalmir Piscinas" className="h-10 md:h-12 w-auto" />
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8">
             <button 
               onClick={() => scrollToSection("sobre")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-sm lg:text-base text-foreground hover:text-primary transition-colors font-medium"
             >
               Sobre
             </button>
             <button 
               onClick={() => scrollToSection("servicos")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-sm lg:text-base text-foreground hover:text-primary transition-colors font-medium"
             >
               Serviços
             </button>
             <button 
               onClick={() => scrollToSection("diferenciais")}
-              className="text-foreground hover:text-primary transition-colors font-medium"
+              className="text-sm lg:text-base text-foreground hover:text-primary transition-colors font-medium"
             >
               Diferenciais
             </button>
             <Button 
               onClick={() => scrollToSection("contato")}
-              className="bg-gradient-water hover:opacity-90 transition-opacity shadow-soft"
+              className="bg-gradient-water hover:opacity-90 transition-opacity shadow-soft text-sm lg:text-base"
             >
               Contato
             </Button>
