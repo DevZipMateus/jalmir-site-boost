@@ -1,6 +1,6 @@
 import { Heart, Users, Award, Target } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import poolMaintenance from "@/assets/pool-maintenance.jpg";
+import aboutPool from "@/assets/about-pool.jpg";
 
 const About = () => {
   return (
@@ -45,8 +45,8 @@ const About = () => {
 
             <div className="space-y-4 md:space-y-6 animate-fade-in px-4">
               <img 
-                src={poolMaintenance} 
-                alt="Técnico realizando manutenção profissional em piscina" 
+                src={aboutPool} 
+                alt="Piscina limpa e bem cuidada pela Jalmir Piscinas" 
                 className="w-full h-auto rounded-2xl shadow-soft"
               />
               <div className="grid grid-cols-2 gap-3 md:gap-4">
