@@ -87,32 +87,46 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md animate-fade-in">
-            <div className="flex flex-col gap-4">
+          <nav className="md:hidden absolute top-full left-0 right-0 py-6 border-t border-border/50 bg-background/98 backdrop-blur-lg shadow-xl animate-fade-in">
+            <div className="flex flex-col gap-2 px-4">
               <button 
                 onClick={() => scrollToSection("sobre")}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left px-4 py-2"
+                className="text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium text-left px-6 py-3.5 rounded-xl border border-transparent hover:border-primary/20"
               >
                 Sobre
               </button>
               <button 
                 onClick={() => scrollToSection("servicos")}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left px-4 py-2"
+                className="text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium text-left px-6 py-3.5 rounded-xl border border-transparent hover:border-primary/20"
               >
                 Serviços
               </button>
               <button 
                 onClick={() => scrollToSection("diferenciais")}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left px-4 py-2"
+                className="text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium text-left px-6 py-3.5 rounded-xl border border-transparent hover:border-primary/20"
               >
                 Diferenciais
               </button>
-              <Button 
-                onClick={() => scrollToSection("contato")}
-                className="bg-gradient-water hover:opacity-90 mx-4"
+              <button 
+                onClick={() => scrollToSection("galeria")}
+                className="text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium text-left px-6 py-3.5 rounded-xl border border-transparent hover:border-primary/20"
               >
-                Contato
-              </Button>
+                Galeria
+              </button>
+              <button 
+                onClick={() => scrollToSection("depoimentos")}
+                className="text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium text-left px-6 py-3.5 rounded-xl border border-transparent hover:border-primary/20"
+              >
+                Depoimentos
+              </button>
+              <div className="mt-2">
+                <Button 
+                  onClick={() => scrollToSection("contato")}
+                  className="w-full bg-gradient-water hover:opacity-90 transition-opacity shadow-soft py-3.5 rounded-xl font-semibold"
+                >
+                  Contato
+                </Button>
+              </div>
             </div>
           </nav>
         )}
