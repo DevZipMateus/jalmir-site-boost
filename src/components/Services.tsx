@@ -10,6 +10,7 @@ import serviceHydraulic from "@/assets/service-hydraulic.jpg";
 import productHeater from "@/assets/product-heater.jpg";
 import productChlorine from "@/assets/product-chlorine.jpg";
 import productLed from "@/assets/product-led.jpg";
+import vinylLinerInstallation from "@/assets/vinyl-liner-installation.jpg";
 
 const Services = () => {
   const products = [
@@ -61,6 +62,12 @@ const Services = () => {
       description: "Circulação adequada da água",
       icon: Wrench,
       image: servicePump,
+    },
+    {
+      title: "Venda e Instalação de Bolsão de Vinil",
+      description: "Revestimento completo em vinil para sua piscina",
+      icon: Waves,
+      image: vinylLinerInstallation,
     },
   ];
 
