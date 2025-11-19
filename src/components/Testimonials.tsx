@@ -47,12 +47,12 @@ const Testimonials = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((testimonial) => (
-            <Card key={testimonial.name} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <CardContent className="p-0">
+            <Card key={testimonial.name} className="overflow-hidden hover:shadow-lg transition-shadow h-full">
+              <CardContent className="p-0 h-full">
                 <img
                   src={testimonial.image}
                   alt={`Depoimento de ${testimonial.name}`}
-                  className="w-full h-auto object-contain"
+                  className="w-full h-full object-cover"
                 />
               </CardContent>
             </Card>
