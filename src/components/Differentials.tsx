@@ -26,14 +26,14 @@ const Differentials = () => {
   ];
 
   return (
-    <section id="diferenciais" className="py-20 bg-background">
+    <section id="diferenciais" className="py-12 sm:py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 md:mb-16 animate-fade-in">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16 animate-fade-in">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4 text-foreground px-4">
               Por que escolher a Jalmir Piscinas?
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
               Diferenciais que fazem toda a diferença no cuidado com sua piscina
             </p>
           </div>
