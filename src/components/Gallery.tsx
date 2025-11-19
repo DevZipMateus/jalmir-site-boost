@@ -22,6 +22,12 @@ import galleryBlueFilter from "@/assets/gallery-blue-filter.jpg";
 import galleryFilterSetup from "@/assets/gallery-filter-setup.jpg";
 import galleryFilterSystem from "@/assets/gallery-filter-system.jpg";
 import galleryPumps from "@/assets/gallery-pumps.jpg";
+import galleryHeaterInstallation from "@/assets/gallery-heater-installation.jpg";
+import galleryPoolPump from "@/assets/gallery-pool-pump.jpg";
+import galleryHeatPumpId80 from "@/assets/gallery-heat-pump-id80.jpg";
+import galleryValvesSystem from "@/assets/gallery-valves-system.jpg";
+import galleryFilterConnection from "@/assets/gallery-filter-connection.jpg";
+import galleryHeatPumpInstalled from "@/assets/gallery-heat-pump-installed.jpg";
 
 const galleryImages = [
   { src: gallery1, alt: "Bomba de Calor Full Inverter Industek" },
@@ -38,6 +44,12 @@ const galleryImages = [
   { src: galleryFilterSetup, alt: "Sistema de filtragem FM 40" },
   { src: galleryFilterSystem, alt: "Sistema de filtragem completo com válvulas" },
   { src: galleryPumps, alt: "Bombas de piscina instaladas" },
+  { src: galleryHeaterInstallation, alt: "Bomba de Calor ID 80 em instalação" },
+  { src: galleryPoolPump, alt: "Bomba de piscina Hydropass instalada" },
+  { src: galleryHeatPumpId80, alt: "Bomba de Calor Industek ID 80 instalada" },
+  { src: galleryValvesSystem, alt: "Sistema de válvulas e filtragem Jacuzzi" },
+  { src: galleryFilterConnection, alt: "Conexões hidráulicas de filtro" },
+  { src: galleryHeatPumpInstalled, alt: "Bomba de Calor ID 80 instalada em área externa" },
 ];
 
 const Gallery = () => {
