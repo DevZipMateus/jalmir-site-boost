@@ -97,14 +97,6 @@ const Services = () => {
                     key={index}
                     className="shadow-soft border-primary/20 hover:shadow-glow transition-all duration-300 hover:-translate-y-1 overflow-hidden"
                   >
-                    <div className="relative h-40 md:h-48 overflow-hidden">
-                      <img 
-                        src={service.image} 
-                        alt={service.title}
-                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent"></div>
-                    </div>
                     <CardHeader className="pb-3">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 bg-gradient-water rounded-lg flex items-center justify-center flex-shrink-0">
