@@ -77,15 +77,7 @@ const Hero = () => {
             </a>
           </div>
 
-          <div className="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 max-w-3xl mx-auto px-4">
-            <div className="text-center p-4 md:p-6 rounded-xl bg-background/50 backdrop-blur-sm shadow-soft">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">10+</div>
-              <div className="text-sm md:text-base text-muted-foreground">Anos de experiência</div>
-            </div>
-            <div className="text-center p-4 md:p-6 rounded-xl bg-background/50 backdrop-blur-sm shadow-soft">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">100%</div>
-              <div className="text-sm md:text-base text-muted-foreground">Satisfação garantida</div>
-            </div>
+          <div className="mt-12 md:mt-16 flex justify-center max-w-3xl mx-auto px-4">
             <div className="text-center p-4 md:p-6 rounded-xl bg-background/50 backdrop-blur-sm shadow-soft">
               <div className="text-3xl md:text-4xl font-bold text-primary mb-2">24h</div>
               <div className="text-sm md:text-base text-muted-foreground">Suporte técnico</div>
