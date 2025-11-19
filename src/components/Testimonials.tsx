@@ -8,10 +8,10 @@ import testimonialBernadete from "@/assets/testimonial-bernadete.png";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Carla Grotto",
-      image: testimonialCarla,
+      name: "Augusto Toledo",
+      image: testimonialAugusto,
       rating: 5,
-      text: "Excelentes profissionais e atendimento impecável. Minha piscina está sempre linda e é elogiada por todos. Além disso, eles são pessoas maravilhosas!",
+      text: "Serviço nota 1000!!! Atendimento profissional e eficiente!!",
     },
     {
       name: "Geraldo",
@@ -20,16 +20,16 @@ const Testimonials = () => {
       text: "Jalmir me salvou e salvou meu aquecedor... craque no q faz .. serviço perfeito",
     },
     {
-      name: "Augusto Toledo",
-      image: testimonialAugusto,
-      rating: 5,
-      text: "Serviço nota 1000!!! Atendimento profissional e eficiente!!",
-    },
-    {
       name: "Bernadete Mendonça",
       image: testimonialBernadete,
       rating: 5,
       text: "Pessoal comprometido, competentes ! Super indico .",
+    },
+    {
+      name: "Carla Grotto",
+      image: testimonialCarla,
+      rating: 5,
+      text: "Excelentes profissionais e atendimento impecável. Minha piscina está sempre linda e é elogiada por todos. Além disso, eles são pessoas maravilhosas!",
     },
   ];
 
