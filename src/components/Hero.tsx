@@ -87,7 +87,7 @@ const Hero = () => {
               <div className="text-sm md:text-base text-muted-foreground">Satisfação garantida</div>
             </div>
             <div className="text-center p-4 md:p-6 rounded-xl bg-background/50 backdrop-blur-sm shadow-soft">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">24h</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">✓</div>
               <div className="text-sm md:text-base text-muted-foreground">Suporte técnico</div>
             </div>
           </div>
