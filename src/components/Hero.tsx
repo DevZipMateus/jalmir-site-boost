@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Droplets } from "lucide-react";
+import { Droplets, Headphones } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
@@ -87,7 +87,9 @@ const Hero = () => {
               <div className="text-sm md:text-base text-muted-foreground">Satisfação garantida</div>
             </div>
             <div className="text-center p-4 md:p-6 rounded-xl bg-background/50 backdrop-blur-sm shadow-soft">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">✓</div>
+              <div className="flex justify-center mb-2">
+                <Headphones className="w-8 h-8 md:w-10 md:h-10 text-primary" />
+              </div>
               <div className="text-sm md:text-base text-muted-foreground">Suporte técnico</div>
             </div>
           </div>
