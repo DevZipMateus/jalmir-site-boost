@@ -120,18 +120,10 @@ const Services = () => {
                     key={index}
                     className="shadow-soft border-primary/20 hover:shadow-glow transition-all duration-300 hover:-translate-y-1 overflow-hidden group"
                   >
-                    <div className="relative h-32 overflow-hidden">
-                      <img 
-                        src={product.image} 
-                        alt={product.name}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/60 to-transparent"></div>
-                      <div className="absolute bottom-2 left-2 w-8 h-8 bg-primary/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
-                        <product.icon className="w-4 h-4 text-primary" />
+                    <CardContent className="pt-6 pb-6 flex items-center gap-3">
+                      <div className="w-10 h-10 bg-gradient-water rounded-lg flex items-center justify-center flex-shrink-0">
+                        <product.icon className="w-5 h-5 text-primary-foreground" />
                       </div>
-                    </div>
-                    <CardContent className="pt-4 pb-4">
                       <p className="font-medium text-sm md:text-base text-foreground">{product.name}</p>
                     </CardContent>
                   </Card>
