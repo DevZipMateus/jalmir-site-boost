@@ -16,6 +16,12 @@ import gallery5 from "@/assets/gallery-5.png";
 import gallery6 from "@/assets/gallery-6.jpg";
 import gallery7 from "@/assets/gallery-7.png";
 import gallery8 from "@/assets/gallery-8.png";
+import galleryFilters1 from "@/assets/gallery-filters-1.jpg";
+import galleryFilterInstallation from "@/assets/gallery-filter-installation.jpg";
+import galleryBlueFilter from "@/assets/gallery-blue-filter.jpg";
+import galleryFilterSetup from "@/assets/gallery-filter-setup.jpg";
+import galleryFilterSystem from "@/assets/gallery-filter-system.jpg";
+import galleryPumps from "@/assets/gallery-pumps.jpg";
 
 const galleryImages = [
   { src: gallery1, alt: "Bomba de Calor Full Inverter Industek" },
@@ -26,6 +32,12 @@ const galleryImages = [
   { src: gallery6, alt: "Linha completa de Bombas de Calor Industek" },
   { src: gallery7, alt: "Bomba de Calor ID200 Industek" },
   { src: gallery8, alt: "Bomba de Calor RV25 com controle por app" },
+  { src: galleryFilters1, alt: "Filtros Sodramar instalados" },
+  { src: galleryFilterInstallation, alt: "Instalação de filtro com sistema hidráulico" },
+  { src: galleryBlueFilter, alt: "Filtro Syl'50 instalado" },
+  { src: galleryFilterSetup, alt: "Sistema de filtragem FM 40" },
+  { src: galleryFilterSystem, alt: "Sistema de filtragem completo com válvulas" },
+  { src: galleryPumps, alt: "Bombas de piscina instaladas" },
 ];
 
 const Gallery = () => {
