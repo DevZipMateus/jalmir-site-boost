@@ -52,7 +52,7 @@ const Testimonials = () => {
                 <img
                   src={testimonial.image}
                   alt={`Depoimento de ${testimonial.name}`}
-                  className="w-full h-auto"
+                  className="w-full h-[300px] md:h-[350px] object-cover object-top"
                 />
               </CardContent>
             </Card>
