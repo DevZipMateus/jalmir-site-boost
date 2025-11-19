@@ -1,33 +1,25 @@
 import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import testimonialCarla from "@/assets/testimonial-carla.png";
-import testimonialGeraldo from "@/assets/testimonial-geraldo.png";
-import testimonialAugusto from "@/assets/testimonial-augusto.png";
-import testimonialBernadete from "@/assets/testimonial-bernadete.png";
 
 const Testimonials = () => {
   const testimonials = [
     {
       name: "Augusto Toledo",
-      image: testimonialAugusto,
       rating: 5,
       text: "Serviço nota 1000!!! Atendimento profissional e eficiente!!",
     },
     {
       name: "Geraldo",
-      image: testimonialGeraldo,
       rating: 5,
       text: "Jalmir me salvou e salvou meu aquecedor... craque no q faz .. serviço perfeito",
     },
     {
       name: "Bernadete Mendonça",
-      image: testimonialBernadete,
       rating: 5,
       text: "Pessoal comprometido, competentes ! Super indico .",
     },
     {
       name: "Carla Grotto",
-      image: testimonialCarla,
       rating: 5,
       text: "Excelentes profissionais e atendimento impecável. Minha piscina está sempre linda e é elogiada por todos. Além disso, eles são pessoas maravilhosas!",
     },
@@ -47,13 +39,17 @@ const Testimonials = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {testimonials.map((testimonial) => (
-            <Card key={testimonial.name} className="overflow-hidden hover:shadow-lg transition-shadow h-full">
-              <CardContent className="p-0 h-full">
-                <img
-                  src={testimonial.image}
-                  alt={`Depoimento de ${testimonial.name}`}
-                  className="w-full h-full object-cover"
-                />
+            <Card key={testimonial.name} className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-4 text-base leading-relaxed">
+                  "{testimonial.text}"
+                </p>
+                <p className="font-semibold text-foreground">{testimonial.name}</p>
               </CardContent>
             </Card>
           ))}
