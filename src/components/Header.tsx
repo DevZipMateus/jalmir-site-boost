@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isVitrinePage = location.pathname === "/vitrine";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,24 +20,38 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-      setIsMobileMenuOpen(false);
+    if (isVitrinePage) {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          const headerOffset = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      }
     }
+    setIsMobileMenuOpen(false);
+  };
+
+  const goToVitrine = () => {
+    navigate("/vitrine");
+    setIsMobileMenuOpen(false);
   };
 
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
+        isScrolled || isVitrinePage
           ? "bg-background/95 backdrop-blur-md shadow-soft" 
           : "bg-transparent"
       }`}
@@ -41,7 +59,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <button 
-            onClick={() => scrollToSection("hero")}
+            onClick={() => isVitrinePage ? navigate("/") : scrollToSection("hero")}
             className="flex items-center gap-3 transition-transform hover:scale-105"
           >
             <img src={logo} alt="Jalmir Piscinas" className="h-10 md:h-12 w-auto" />
@@ -66,6 +84,12 @@ const Header = () => {
               className="text-sm lg:text-base text-foreground hover:text-primary transition-colors font-medium"
             >
               Diferenciais
+            </button>
+            <button 
+              onClick={goToVitrine}
+              className="text-sm lg:text-base text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Vitrine
             </button>
             <Button 
               onClick={() => scrollToSection("contato")}
@@ -118,6 +142,12 @@ const Header = () => {
                 className="text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium text-left px-6 py-3.5 rounded-xl border border-transparent hover:border-primary/20"
               >
                 Depoimentos
+              </button>
+              <button 
+                onClick={goToVitrine}
+                className="text-foreground hover:text-primary hover:bg-primary/5 transition-all font-medium text-left px-6 py-3.5 rounded-xl border border-transparent hover:border-primary/20"
+              >
+                Vitrine
               </button>
               <div className="mt-2">
                 <Button 
