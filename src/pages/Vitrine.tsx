@@ -14,6 +14,22 @@ const Vitrine = () => {
     body.style.margin = "0";
     body.style.padding = "0";
 
+    // Hide Montesite badge on vitrine page
+    const style = document.createElement("style");
+    style.id = "hide-montesite-badge";
+    style.textContent = `
+      #montesite-footer-badge,
+      [id*="montesite"],
+      [class*="montesite"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        pointer-events: none !important;
+      }
+    `;
+    document.head.appendChild(style);
+
     // Cleanup function to restore overflow on unmount
     return () => {
       html.style.overflow = "";
@@ -22,6 +38,12 @@ const Vitrine = () => {
       body.style.height = "";
       body.style.margin = "";
       body.style.padding = "";
+      
+      // Remove the style tag
+      const styleTag = document.getElementById("hide-montesite-badge");
+      if (styleTag) {
+        styleTag.remove();
+      }
     };
   }, []);
 
@@ -36,15 +58,15 @@ const Vitrine = () => {
         <Header />
       </div>
 
-      {/* Iframe Container */}
+      {/* Iframe Container - full height without badge */}
       <iframe
         src="https://jalmirpiscina.egestor.com.br/vitrine/"
         title="Vitrine Jalmir Piscinas"
         className="fixed left-0 right-0 w-full border-none"
         style={{
           top: "80px",
-          bottom: "63px",
-          height: "calc(100vh - 143px)",
+          bottom: "0",
+          height: "calc(100vh - 80px)",
           zIndex: 0,
           overflowY: "auto",
         }}
